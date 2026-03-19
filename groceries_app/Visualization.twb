@@ -1,0 +1,2110 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20253.25.1210.1815                               -->
+<workbook original-version='18.1' source-build='2025.3.1 (20253.25.1210.1815)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='analytics_prices' inline='true' name='federated.1t3yrxl0j7j8zr1b0zyzx0bfd3bw' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='analytics_prices' name='textscan.1vjbko70i5hp191ermnyw07tjhau'>
+            <connection class='textscan' directory='/Users/martin/experiments/groceries_app/local_collections' filename='analytics_prices.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1vjbko70i5hp191ermnyw07tjhau' name='analytics_prices.csv' table='[analytics_prices#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en' separator=','>
+            <column datatype='integer' name='product_id' ordinal='0' />
+            <column datatype='string' name='name' ordinal='1' />
+            <column datatype='string' name='brand' ordinal='2' />
+            <column datatype='string' name='category' ordinal='3' />
+            <column datatype='real' name='price' ordinal='4' />
+            <column datatype='real' name='unit_price' ordinal='5' />
+            <column datatype='string' name='unit_price_qt' ordinal='6' />
+            <column datatype='string' name='currency' ordinal='7' />
+            <column datatype='datetime' name='timestamp' ordinal='8' />
+            <column datatype='boolean' name='is_offer' ordinal='9' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[analytics_prices.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;¤&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>product_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[product_id]</local-name>
+            <parent-name>[analytics_prices.csv]</parent-name>
+            <remote-alias>product_id</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[analytics_prices.csv_E16F21CEA4B44CB789D057792EA8FF87]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[name]</local-name>
+            <parent-name>[analytics_prices.csv]</parent-name>
+            <remote-alias>name</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[analytics_prices.csv_E16F21CEA4B44CB789D057792EA8FF87]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>brand</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[brand]</local-name>
+            <parent-name>[analytics_prices.csv]</parent-name>
+            <remote-alias>brand</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[analytics_prices.csv_E16F21CEA4B44CB789D057792EA8FF87]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>category</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[category]</local-name>
+            <parent-name>[analytics_prices.csv]</parent-name>
+            <remote-alias>category</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[analytics_prices.csv_E16F21CEA4B44CB789D057792EA8FF87]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>price</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[price]</local-name>
+            <parent-name>[analytics_prices.csv]</parent-name>
+            <remote-alias>price</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[analytics_prices.csv_E16F21CEA4B44CB789D057792EA8FF87]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>unit_price</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[unit_price]</local-name>
+            <parent-name>[analytics_prices.csv]</parent-name>
+            <remote-alias>unit_price</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[analytics_prices.csv_E16F21CEA4B44CB789D057792EA8FF87]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>unit_price_qt</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[unit_price_qt]</local-name>
+            <parent-name>[analytics_prices.csv]</parent-name>
+            <remote-alias>unit_price_qt</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[analytics_prices.csv_E16F21CEA4B44CB789D057792EA8FF87]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>currency</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[currency]</local-name>
+            <parent-name>[analytics_prices.csv]</parent-name>
+            <remote-alias>currency</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[analytics_prices.csv_E16F21CEA4B44CB789D057792EA8FF87]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>timestamp</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[timestamp]</local-name>
+            <parent-name>[analytics_prices.csv]</parent-name>
+            <remote-alias>timestamp</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[analytics_prices.csv_E16F21CEA4B44CB789D057792EA8FF87]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>is_offer</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[is_offer]</local-name>
+            <parent-name>[analytics_prices.csv]</parent-name>
+            <remote-alias>is_offer</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[analytics_prices.csv_E16F21CEA4B44CB789D057792EA8FF87]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='analytics_prices.csv' datatype='table' name='[__tableau_internal_object_id__].[analytics_prices.csv_E16F21CEA4B44CB789D057792EA8FF87]' role='measure' type='quantitative' />
+      <column caption='Brand' datatype='string' name='[brand]' role='dimension' type='nominal' />
+      <column caption='Category' datatype='string' name='[category]' role='dimension' type='nominal' />
+      <column caption='Currency' datatype='string' name='[currency]' role='dimension' type='nominal' />
+      <column caption='Is Offer' datatype='boolean' name='[is_offer]' role='dimension' type='nominal' />
+      <column caption='Name' datatype='string' name='[name]' role='dimension' type='nominal' />
+      <column caption='Price' datatype='real' default-format='C1044%' name='[price]' role='measure' type='quantitative' />
+      <column caption='Product Id' datatype='integer' name='[product_id]' role='dimension' type='ordinal' />
+      <column caption='Timestamp' datatype='datetime' name='[timestamp]' role='dimension' type='ordinal' />
+      <column caption='Unit Price' datatype='real' name='[unit_price]' role='measure' type='quantitative' />
+      <column caption='Unit Price Qt' datatype='string' name='[unit_price_qt]' role='dimension' type='nominal' />
+      <column-instance column='[brand]' derivation='None' name='[none:brand:nk]' pivot='key' type='nominal' />
+      <column-instance column='[name]' derivation='None' name='[none:name:nk]' pivot='key' type='nominal' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='/var/folders/fg/4rmg_m2x20s5rz90blrj0xl40000gn/T/tableau-temp/#TableauTemp_1yli1kr0hxncc21dwjyhe1rce7qh.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='03/05/2026 10:52:06 AM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>product_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[product_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>product_id</remote-alias>
+              <ordinal>0</ordinal>
+              <family>analytics_prices.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>452</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[analytics_prices.csv_E16F21CEA4B44CB789D057792EA8FF87]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>name</remote-alias>
+              <ordinal>1</ordinal>
+              <family>analytics_prices.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>452</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[analytics_prices.csv_E16F21CEA4B44CB789D057792EA8FF87]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>brand</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[brand]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>brand</remote-alias>
+              <ordinal>2</ordinal>
+              <family>analytics_prices.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>20</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[analytics_prices.csv_E16F21CEA4B44CB789D057792EA8FF87]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>category</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[category]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>category</remote-alias>
+              <ordinal>3</ordinal>
+              <family>analytics_prices.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>8</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[analytics_prices.csv_E16F21CEA4B44CB789D057792EA8FF87]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>price</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[price]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>price</remote-alias>
+              <ordinal>4</ordinal>
+              <family>analytics_prices.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>287</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[analytics_prices.csv_E16F21CEA4B44CB789D057792EA8FF87]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>unit_price</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[unit_price]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>unit_price</remote-alias>
+              <ordinal>5</ordinal>
+              <family>analytics_prices.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>355</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[analytics_prices.csv_E16F21CEA4B44CB789D057792EA8FF87]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>unit_price_qt</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[unit_price_qt]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>unit_price_qt</remote-alias>
+              <ordinal>6</ordinal>
+              <family>analytics_prices.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[analytics_prices.csv_E16F21CEA4B44CB789D057792EA8FF87]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>currency</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[currency]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>currency</remote-alias>
+              <ordinal>7</ordinal>
+              <family>analytics_prices.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[analytics_prices.csv_E16F21CEA4B44CB789D057792EA8FF87]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>timestamp</remote-name>
+              <remote-type>135</remote-type>
+              <local-name>[timestamp]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>timestamp</remote-alias>
+              <ordinal>8</ordinal>
+              <family>analytics_prices.csv</family>
+              <local-type>datetime</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>3731</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[analytics_prices.csv_E16F21CEA4B44CB789D057792EA8FF87]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>is_offer</remote-name>
+              <remote-type>11</remote-type>
+              <local-name>[is_offer]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>is_offer</remote-alias>
+              <ordinal>9</ordinal>
+              <family>analytics_prices.csv</family>
+              <local-type>boolean</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[analytics_prices.csv_E16F21CEA4B44CB789D057792EA8FF87]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:name:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;Aubergine Spania / Nederland, 1 stk&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Biola® yoghurtdrikk jordbær &amp; rabarbra Uten Tilsatt Sukker, 1000 g&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Ekstra Stor Mango Moden, Brasil / Peru, 1 stk&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Ferdigkuttet Melonmiks i Beger Costa Rica/ Brasil, 200 g&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Fruktkurv Pluss Miks av frukt Ulike Land, 4,5 kg&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Isbergsalat Vår Laveste pris, Spania, 1 stk&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Kinakål Portugal, 1 stk&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Litago Sjokolade Uten Tilsatt Sukker, 1 l&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Minimais Ferske, Kenya / Thailand, 125 g&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Økologisk Kiwi,  4-5 stk Italia, 500 g&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Papaya Formosa Brasil / Spania, 1 stk&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Rebell Romano 100 g&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Rødbeter , økologisk , Norge 1 stk&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Shimeji sopp Kina, 1 stk&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Skummet melk 0,1\% 1,75 l&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Spisskål rød Norge, 1 stk&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Tine Lettmelk 0,5\%, 1 l&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;YT yoghurtdrikke Mango og pasjonsfrukt, 300 g&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Agurk Norge, 1 stk&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Ancho Chili 100 g&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Cherrytomater, Gule Marokko / Spania / Tunisia, 250 g&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Epler, grønne, 4 pk Granny Smith, Italia, 700 g&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Fersk Rosenkål Nederland, 400 g&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Helmelk 3,7\% 1,75 l&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Ingefær Peru/ Kina, 500 g&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Lett Økologisk Gårdsmjølk ikke Homogenisert, 1 l&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Lions Mane tørket Økologisk, 20 g&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Liten Agurk Vår laveste pris Klasse 2, Norge, 1 stk&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Maiskorn 3pk Økologisk, 570 g&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Melon Cantaloupe Spania / Brasil, 1 stk&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Økologisk Spisspaprika Hellas / Spania, 2 stk&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Økologisk Syrna Blå Fettfri, 1000 g&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Økologiske Sitroner Spania, 2 stk&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Plommetomat Nederland / Spania, 500 g&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Runde Sukkererter/ Sugarsnap Kenya / Egypt, 200 g&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Små Sitroner Vår Laveste Pris, Egypt/ Spania, 500 g&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Store Appelsiner Sør Afrika/ Spania, 3 stk&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Tine Laktosefri Lettmelk 0,5\%, 1 l&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Tine Skummet Kulturmjølk Fettfri, 1 kg&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Tomater Vår Laveste Pris, Egypt/ Spania, 1 kg&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Aromasopp Polen, 250 g&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Biola® yoghurtdrikk blåbær 1000 g&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Chioggiabeter Ferske, Norge, 500 g&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Epler, Røde, 6 pk Gala, Italia, 900 g&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Fersk Timian i Pose, Etiopia/ Kenya, 20 g&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Gulrot i Staver Norge, 180 g&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Jordskokk Tyrkia/ Frankrike, 500 g&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Litago Jordbær 0,5 l&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Økologisk Brokkoli Spania / Nederland, 1 stk&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Økologisk Hvitløk 2/3 stk Kina, 2 stk&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Økologiske Taco spiremix -Brokolli, Kløver, Mungbønner Norge, 50 g&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Protein Milkshake Strawberry, 1000 ml&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Råkostblanding Norge, 1 kg&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Sassy Red Oak Norge, 90 g&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Snadder sjalottløk 4 stk Nederland, 150 g&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;TINE Laktosefri Sjokomelk Fettfri, 1 l&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Tomater Cherry Norge, 250 g&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Vårløk i Bunt Italia / Tyskland / Egypt, 150 g&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;YT proteinshake Sjokolade, 300 ml&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;Guajillo Chili 100 g&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;Tørket shiitake Økologisk, 20 g&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Bakepotet Frankrike/ England, 1 stk&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Biola® yoghurtdrikk sitron &amp; ingefær 1000 g&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Epler i Pose Vår Laveste pris Polen/ Nederland, 2 kg&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Fersk Dill i Pose, Etiopia/ Kenya, 20 g&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Grenadillas, Oransje Pasjonsfrukt Peru / Ecuador, 4 stk&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Hodekål Norge, 1,2 kg&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Kiwi Maks 3 til nedsatt pris, Laveste Pris, Hellas / Chile, 8 stk&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Müllermilch Melkedrikk Sjokolade 400 g&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Økologisk Hodekål Norge, 1 kg&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Økologiske Alfalfaspirer Norge, 100 g&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Økologiske Gala Epler Argentina / Italia, 1 kg&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Paprika Rød Vår Laveste Pris, Spania / Nederland, 600 g&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Q Helmelk 1 l&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Rødkål Norge, 1,4 kg&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Sjalottløk I nett, Nederland, 350 g&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Stor Champignon Polen, 400 g&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Tine Fettfri Melk Skummet 0,1\% fett, 1 l&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;TINE Lettmelk Mørk Sjokolade, 1 l&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Avokado modnet Maks 3 til nedsatt pris, Chile / Colombia/ Marokko, 2 stk&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Biola® yoghurtdrikk mango Uten tilsatt sukker, 1000 g&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Epler gule, 4 pk Golden Delicious, Italia, 750 g&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Fersk Ananas i skiver Costa Rica, 200 g&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Granateple Tyrkia / Egypt, 1 stk&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Jalapeño Grønn Nederland, 50 g&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Kinesisk Hvitløk u/fedd 250 g&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Milkshake Sjokolade 250 ml&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Müller Angel Hair Med smak av hvit sjokolade, pistasj og bringebær&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Økologisk Lime Colombia/ Brasil, 2 stk&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Papaya Snart Moden Spania / Brasil, 1 stk&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Reddik Nederland, 130 g&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Rødbeter Ferske, Norge, 500 g&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Sikori/ Endive salat Nederland, 500 g&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Squash Grønn Spania, 1 stk&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Surmelk Upasteurisert 1 l&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Tine Lettmelk 1\% fett, 1 l&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Artisjokk Fersk Frankrike/ Spania, 1 stk&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Biola® yoghurtdrikk blåbær Uten Tilsatt Sukker, 1000 g&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Ekstra søte piccolo tomater Norge, 1 kg&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Fennikel Italia / Tyskland, 1 stk&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Ferske Gule Beter Norge, 500 g&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Gulrøtter 2. Sortering Norge, 1 kg&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Litago Sjokolade 0,5 l&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Lollosalat Rød Spania, 1 stk&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Mini Pak Choi Italia/ Spania, 125 g&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Økologisk Ingefær Kina/ Peru, 100 g&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Økologiske tomater Spania, 500 g&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Proteinmelk bringebær Uten tilsatt sukker, 400 g&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Råkostmiks Vasket, Norge, 225 g&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Sellerirot 1 stk Norge, 500 g&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Sousvide kokte Rødbeter, Økologisk Norge, 500 g&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Tine Langtidsholdbar Helmelk 1 l&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Tomater klase Holland, 500 g&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Yoom tomater Norge, 250 g&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;YT restitusjonsdrikk Banan og jordbær, 330 ml&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Blå / Rød Plommer I kurv, Sør Afrika, 500 g&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Cantaloupemelon i Skiver Spania, 200 g&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Fersk Mynte i Pose, Etiopia, 20 g&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Gul Løk Norge, 2 stk&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Helmelk Laktosefri, 1,75 l&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Hvitløk 2-3pk, Kina/Spania, 100 g&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Kokosnøtt Elfenbenkysten/ India, 1 stk&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Mango Moden, Brasil/ Peru, 2 stk&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Økologisk Rørosmjølk Lett 1,2\% fett, 1 l&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Økologisk Søtpotet Spania / Egypt, 500 g&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Økologiske Purreløkspirer Norge, 50 g&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Piel de Sapo Melon Spania / Brasil, 1 stk&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Q Melk Skummet 0,1\%, 1 l&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Rotmiks, økologisk , Norge 800 g&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Små Pærer Vår Laveste Pris,  Nederland/ Belgia, 1 kg&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Stor spiseklar crispisalat Norge, 160 g&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Tine Kulturmjølk 1000 g&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;TINE Sjokomelk 0,5 l&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Ananas Gold Ghana / Costa Rica, Ca 1kg&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Biola Bringebær Partivare, 1,5 l&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Ekstra søte piccolo cherry klasetomater Norge, 200 g&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Epler, Grønne, 6 pk Maks 3 til nedsatt pris, Granny Smith, Italia, 900 g&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Fersk Rosmarin i Pose, Etiopia / Kenya, 20 g&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Gul Paprika Nederland / Spania, 2 stk&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Kefir Blåbær &amp; Solbær 1000 g&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Lettmelk med vaniljesmak Uten tilsatt sukker, 1,75 l&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Liten Kålrot Vår Laveste Pris, Norge, 500 g&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Midnattsolpotet Gulløye 1 kg&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Økologisk Squash Spania/ Nederland, 1 stk&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Økologisk Tjukkmjølk 1,5\% fett, 1 l&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Økologiske Spiremix, Spicymix av Brocolli, Reddik, Kløver Norge, 50 g&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Portobello Sopp i Beger Polen, 280 g&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Runde tomater Spania/ Marokko, 500 g&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Små Spisspaprika Klasse 2 Vår laveste pris, Nederland / Spania / Tyrkia, 180 g&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Store Lime Brasil/ Peru, 3 stk&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Tine Laktosefri Lettmelk 0,5\%, 1,75 l&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;YT proteinmelk Kakao, 1 l&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Big Butter Norge, 110 g&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Brokkoli Vår Laveste Pris. Nederland/ Spania, 1 stk&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;E+ Biola bringebær 300 ml&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Fersk Koriander i Pose, Etiopia/ Kenya, 20 g&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Gul Løk Vår Laveste Pris, Norge, 1 kg&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Honningmelon Spania  / Brasil, 1 stk&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Knoll Småpoteter Norge, 650 g&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Økologisk Avokado Spania / Kenya, 2 stk&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Økologisk Rørosmjølk Laktosefri Lett 1,2\% fett, 1 l&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Økologiske Brokkolispirer Norge, 50 g&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Økologiske Pærer 3-4 stk Frankrike / Nederland, 500 g&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Persillerot Nederland / Frankrike, 200 g&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Q Melk Lett 1,75 l&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Romano Grønn Spania, 1 stk&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Små Grønne Druer Vår Laveste Pris, Namibia/ SørAfrika, 500 g&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Stor Paprika Rød 2/3 stk Marokko / Spania, 2 stk&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;TINE Kaffemelk 100x10 ml, 1 l&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Tine Økologisk Lettmelk 0,7\% fett, 1 l&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Asparges i Bunt Marokko / Peru, 250 g&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Biola® yoghurtdrikk bringebær 1000 g&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Ekstra Stor Avokado moden Colombia/ Marokko / Chile, 1 stk&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Ferdigkokte poteter uten skall Norge, 3 kg&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Fiken SørAfrika/ Peru, 4 stk&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Gulrøtter vasket Norge, 1 kg&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Litago Sjokolade 1 l&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Maiskolber Sousvidekokte, India/Thailand, 2 stk&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Mini plommetomat Norge, 175 g&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Økologisk Isbergsalat Spania, 1 stk&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Orange mini Paprika, ekstra søte Marokko / Spania, 150 g&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Proteinmelk sjokolade Uten tilsatt sukker, 400 g&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Rambutan Indonesia / Guatemala, 250 g&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Rockit matpakke epler Østerike, 700 g&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Sellerirot , økologisk , Norge 1 stk&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Tine Langtidsholdbar Lettmelk 1,2\% fett, 1 l&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Tomater miks Norge, 200 g&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;YT restitusjonsdrikk Kakao, 330 ml&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Bananer Ecuador / Costa Rica, 1 kg&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Blomkål Vår Laveste pris, Spania, 1 stk&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Cocio Classic Flaske 400 ml&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Fersk Estragon i Pose, Etiopia/ Kenya, 20 g&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Gresskar Butternut Portugal / Spania, 750 g&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Hodesalat Nederland, 1 stk&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Kjekkas grønn ekeblad Norge, 110 g&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Norske poteter Asterix, 2,5 kg&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Økologisk Fersk Sjokomjølk Laktosefri, 0,5 l&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Økologiske Appelsiner Hellas / Spania, 1 kg&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Økologiske Gulrøtter Norge, 750 g&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Pasjonsfrukt Colombia / Vietnam/ SørAfrika, 4 stk&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Q Kefir Naturell 1000 g&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Rødløk Laveste Pris, Norge, 1 kg&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Sousvidekokte Maiskolber Som Er Delt India, 6 stk&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Stor Hjertesalat Spania/ Tyskland, 2 stk&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Tine Helmelk 1 l&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Tine Lettmelk Sjokolade Usøtet, 1 l&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Bananer i kasse Costa Rica, 5 kg&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Bringebær Portugal/ Marokko, 125 g&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Drikkeyoghurt jordbær 8x100 g, 800 g&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Fersk Gressløk i Pose, Etiopia, 20 g&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Grønn Paprika Nederland / Spania, 2 stk&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Hokkaido Frankrike/ Nederland, 1 kg&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Klementiner Spania/ Marokko, 1 kg&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Norske poteter Colombo, 2,5 kg&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Økologisk helmelk 1 l&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Økologiske Bananer 5-6 Stk. Fairtrade, Ecuador / Peru, 800 g&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Økologiske Klementiner Spania/ Hellas, 500 g&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Pastinakk , økologisk , Norge 200 g&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Q Melk Lett 0,5\%, 1 l&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Rødløk Skivet Norge, 250 g&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Spisskål Holland/ Spania, 1 stk&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Stor Isbergsalat Nederland / Spania, 1 stk&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Tine Helmelk 1,75 l&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Tine Lettmelk Sjokolade Usøtet, 1,75 l&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Bjørnebær Portugal /Marokko/ Spania, 125 g&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Brokkolini Kenya / Spania, 200 g&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;E+ Biola kakao 300 ml&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Fersk Kruspersille i Beger/pose, Etiopia/ Nederland, 20 g&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Gul Kiwi Italia / Ny-Zealand, 4 stk&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Hvit Pomelo Kina&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Knutekål Italia, 180 g&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Økologisk Blomkål Frankrike / Spania, 1 stk&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Økologisk Rørosmjølk Lett 0,7\% fett, 1 l&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Økologisk Ruccula Italia, 50 g&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Økologiske Poteter Vasket Colomba Anouk , Norge, 1,5 kg&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Physalis Kurv Colombia, 100 g&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Q Melk Lett 1\%, 1 l&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Rotmiks Maks 3 til nedsatt pris, Beter, Sellerirot &amp; Pastinakk, Nederland, 1 kg&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Små Lime  Vår Laveste pris Brasil / Colombia, 6 stk&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Stor Søtpotet Egypt / Spania, 1 stk&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Tine Kefir Økologisk, 1000 g&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Tine Økologisk Lettmelk 1,2\%, 1 l&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Blåbær i kurv Peru/ Chile, 125 g&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Cherrytomater Vår Laveste Pris Spania/ Marokko/ Egypt, 250 g&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Fersk Oregano i Pose, Etiopia/ Kenya, 20 g&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Gul Løk Norge, 4 stk&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Helmelk Økologisk, 1 l&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Ingefær Kina / Peru, 100 g&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Kefir 0.1\% Upasteurisert 1l 1 l&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Kumquat Tyrkia / Spania, 100 g&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Mangostan 2/3 stk. Indonesia, 250 g&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Økologisk Rørosmjølk Skummet 0,1\% fett, 1 l&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Økologisk Spinat Italia / Spania, 200 g&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Økologiske Reddikspirer Norge, 50 g&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Pink Lady Epler Italia/ Sør Afrika, 6 stk&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Q proteinmelk sjokolade Laktosefri, 1 l&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Rubinstep Norge, 1,5 kg&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Små Røde Druer Vår Laveste Pris, Sør Afrika/ Peru, 500 g&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Stor Spisspaprika Rød Klasse 1 Marokko / Spania / Nederland, 350 g&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Tine Laktosefri Helmelk 1 l&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Tine Sjokomelk 1 l&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Avokado Snart Moden Vår laveste Pris ca 7 stk, Colombia/ Marokko&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Biola® yoghurtdrikk melon &amp; pasjonsfrukt Laktosefri, 1000 g&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Chipotle Chili 100 g&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Druer Grønne Stenfrie Kurv Brasil/ Peru/ SørAfrika, 500 g&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Fersk basilikum i Pose, Etiopia/ Kenya, 20 g&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Granateplekjerner Spania, 100 g&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Jordbær Spania, 400 g&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Kiwano Frankrike / Nederland, 200 g&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Müllermilch Melkedrikk Banan 400 g&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Økologisk Gul Løk Nederland, 750 g&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Økologisk Rød Paprika Spania/Holland, 1 stk&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Paprika Mix 3 pk Gul, Grønn &amp; Rød Spania / Holland, 500 g&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Q Fersk Sjokolademelk 0,5 l&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Reddik Regnbue flowpack Nederland, 150 g&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Røde Appelsiner Italia, 1 kg&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Sitroner 2 stk Argentina / Spania, 380 g&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Stangselleri Spania, 1 stk&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Syrna bringebær Økologisk, 1000 g&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Tine Lettmelk 1\% fett, 1,75 l&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Tørket maitake Økologisk, 20 g&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Aspargesbønner Kenya/ Egypt, 150 g&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Biola® yoghurtdrikk jordbær 1000 g&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Crispisalat Beger, Norge, 150 g&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Ferdigkuttet Fruktmiks i Beger Costa Rica/ Brasil, 180 g&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Fruktkurv Miks av frukt Ulike Land, 4 kg&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Habanero Rød Marocco/ Nederland, 50 g&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Litago Sjokolade Uten Tilsatt Sukker, 0,5 l&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Mandelpoteter Norge, 2 kg&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Miniagurk Spania, 250 g&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Økologisk Kålrot Norge, 1 stk&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Østerssopp i Beger Polen, 200 g&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Purreløk Norge, 1 stk&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Rød Pitahaya, Dragefrukt Brasil/ Vietnam, 1 stk&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Shiitakesopp i Beger Polen, 200 g&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Sjokomelk 2,5 dl&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Thaibasilikum Gourmet Frisk i Pose, Etiopia / Kenya, 20 g&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Tine Lettmelk 0,5\% fett, 1,75 l&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;YT yoghurtdrikke Bringebær, 300 g&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Biola Skogsbær Partivare, 1,5 l&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Blomkål Nederland / Spania, 1 stk&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Chili de Arbol 50 g&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Chilipepper Grønn Spania/ Holland, 50 g&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Epler, gule, 6 pk Golden Delicious, Italia, 900 g&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Fersk Salvie i Pose, Etiopia/ Kenya, 20 g&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Gul Pitahaya, Dragefrukt Columbia/ Ecuador, 1 stk&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Kefir bringebær 1000 g&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Litago Banansplitt 0,5 l&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Liten mango Snart moden Vår Laveste pris Brasil/ Peru, 1 stk&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Midnattsolpotet Gulløye Mini Norge, 900 g&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Økologisk Stangselleri Nederland / Spania, 350 g&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Økologisk Tjukkmjølk fra Røros 4\% fett, 1 l&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Økologiske Spiresnacks, Mix av Bønner, Erter &amp; Linser Norge, 100 g&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Poteter, Usorterte Vår Laveste Pris, Norge 5 kg&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Salat Mix, økologisk, 75 gram Italia, 1 stk&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Snacksgulrot Norge, 200 g&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Store Pærer Conference Belgia / Nederland, 4 stk&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Tine Laktosefri Lettmelk 1,0\%, 1,75 l&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Tørket kongeøsters Økologisk, 20 g&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;YT proteinmelk Kakao, 330 ml&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Bananer i Klase 5-6 Stk Costa Rica / Colombia&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Brokkoli Spania/ Nederland, 1 stk&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Drikkeyoghurt jordbær / banan 8x100g, 800 g&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Fersk Kjørvel i Pose, Norge, 20 g&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Grønnkål Italia, 200 g&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Honningmelon Skivet Brasil, 200 g&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Knoll Langpanne Poteter Norge, 1 kg&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Økologisk Agurk Spania, 1 stk&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Økologisk Rørosmjølk Hel 4,0\% fett, 1 l&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Økologiske Bønnespirer Norge, 180 g&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Økologiske Kløverspirer beger Norge, 50 g&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Pastinakk Norge, 200 g&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Q Melk Lett 0,5\%, 1,75 l&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Rødløk Strømpe 2 stk Norge, 375 g&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Små Champignon Kurv, Polen, 250 g&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Stor Kålrot Norge, 1 kg&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;TINE IsKaffe Protein latte, 330 ml&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;TINE Mellommelk 1 l&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Avokado Spisemoden Columbia / Chile/ Spania, 4 stk&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Biola® yoghurtdrikk rødbet, eple &amp; lime 1000 g&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Druer Røde Stenfrie Kurv Namibia/ SørAfrika/ Peru, 500 g&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Fersk Bladpersille i Pose, Etiopia/ Italia, 20 g&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Grapefrukt Peru / Sør Afrika/ Egypt, 1 stk&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Hjertesalat Vår Laveste Pris Spania, 2 stk&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Kiwi Italia / Chile, 4 stk&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Müllermilch Melkedrikk Jordbær 400 g&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Økologisk Hjertesalat Spania / Nederland, 2 stk&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Økologisk Rødløk Nederland, 500 g&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Paprika Padron Marokko / Nederland, 200 g&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Q Fersk Sjokolademelk 1 l&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Rips Holland / Chile, 125 g&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Røde Minipaprika, Ekstra Søte Marokko / Spania, 150 g&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Sitrongress Indonesia/ Thailand, 50 g&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Stekemix med Aspargesbønner Gulrot &amp; Løk Marokko/ Spania, 200 g&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Syrna naturell Økologisk, 1000 g&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Tine Lettmelk Med Vanilje Uten Tilsatt Sukker, 1 l&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Appelsiner Maks 2 til nedsatt pris, Vår Laveste Pris, Sør Afrika / Spania, 2 kg&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Biola® syrnet lettmelk Laktosefri, 1000 g&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Chilipepper Rød Spania/ Nederland, 50 g&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Epler, røde, 4 pk Gala Italia, 800 g&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Fersk Sitronmelisse i Pose, Norge, 20 g&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Gul Squash Nederland/ Spania, 250 g&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Litago DOBBEL Sjokolade 1 l&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Liten Søtpotet Maks 3 til nedsatt pris, Spania / Egypt, 1 stk&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Midnattsolpotet Mandelpotet 1,5 kg&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Økologiske Cherrytomater Spania / Danmark, 250 g&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Økologiske Sukkerertspirer Norge, 50 g&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Protein Milkshake Chocolate, 1000 ml&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Radicchio Rosso Italia, 1 stk&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;San Marzano Klasetomater Norge, 400 g&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Snadder rødløk 4 stk Norsk, 400 g&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Sukkererter Flate, Peru/ Egypt, 150 g&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Tine Laktosefri Lettmelk 1\% fett, 1 l&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;YT proteinmelk Naturell, 1 l&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:brand:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;Kolonihagen&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;TINE&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Müller&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;Cocio&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Onna&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Krydra&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Hørte Gård&quot;</bucket>
+            </map>
+            <map to='#9c755f'>
+              <bucket>&quot;Rygge Meieri&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Wiig Gartneri&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Q&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Huseby Gaard&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Valmsnes Gård&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;ACTIMEL&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;Propud&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Knoll&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>%null%</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Myhres Matsopp&quot;</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>&quot;Rørosmeieriet&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Hardanger&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <object-graph>
+        <objects>
+          <object caption='analytics_prices.csv' id='analytics_prices.csv_E16F21CEA4B44CB789D057792EA8FF87'>
+            <properties context=''>
+              <relation connection='textscan.1vjbko70i5hp191ermnyw07tjhau' name='analytics_prices.csv' table='[analytics_prices#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en' separator=','>
+                  <column datatype='integer' name='product_id' ordinal='0' />
+                  <column datatype='string' name='name' ordinal='1' />
+                  <column datatype='string' name='brand' ordinal='2' />
+                  <column datatype='string' name='category' ordinal='3' />
+                  <column datatype='real' name='price' ordinal='4' />
+                  <column datatype='real' name='unit_price' ordinal='5' />
+                  <column datatype='string' name='unit_price_qt' ordinal='6' />
+                  <column datatype='string' name='currency' ordinal='7' />
+                  <column datatype='datetime' name='timestamp' ordinal='8' />
+                  <column datatype='boolean' name='is_offer' ordinal='9' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Category: &lt;</run>
+            <run>[federated.1t3yrxl0j7j8zr1b0zyzx0bfd3bw].[none:category:nk]</run>
+            <run>&gt;&#10;Product: &lt;</run>
+            <run>[federated.1t3yrxl0j7j8zr1b0zyzx0bfd3bw].[none:name:nk]</run>
+            <run>&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='analytics_prices' name='federated.1t3yrxl0j7j8zr1b0zyzx0bfd3bw' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1t3yrxl0j7j8zr1b0zyzx0bfd3bw'>
+            <column-instance column='[brand]' derivation='Attribute' name='[attr:brand:nk]' pivot='key' type='nominal' />
+            <column-instance column='[price]' derivation='Avg' name='[avg:price:qk]' pivot='key' type='quantitative' />
+            <column caption='Brand' datatype='string' name='[brand]' role='dimension' type='nominal' />
+            <column caption='Category' datatype='string' name='[category]' role='dimension' type='nominal' />
+            <column caption='Name' datatype='string' name='[name]' role='dimension' type='nominal' />
+            <column-instance column='[category]' derivation='None' name='[none:category:nk]' pivot='key' type='nominal' />
+            <column-instance column='[name]' derivation='None' name='[none:name:nk]' pivot='key' type='nominal' />
+            <column caption='Price' datatype='real' default-format='C1044%' name='[price]' role='measure' type='quantitative' />
+            <column-instance column='[timestamp]' derivation='Day-Trunc' name='[tdy:timestamp:qk]' pivot='key' type='quantitative' />
+            <column caption='Timestamp' datatype='datetime' name='[timestamp]' role='dimension' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1t3yrxl0j7j8zr1b0zyzx0bfd3bw].[none:category:nk]'>
+            <groupfilter function='member' level='[none:category:nk]' member='&quot;Melk&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1t3yrxl0j7j8zr1b0zyzx0bfd3bw].[none:name:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:name:nk]' member='&quot;Økologisk Brokkoli Spania / Nederland, 1 stk&quot;' />
+              <groupfilter function='member' level='[none:name:nk]' member='&quot;Økologisk Lime Colombia/ Brasil, 2 stk&quot;' />
+              <groupfilter function='member' level='[none:name:nk]' member='&quot;Q Helmelk 1 l&quot;' />
+              <groupfilter function='member' level='[none:name:nk]' member='&quot;Tine Helmelk 1 l&quot;' />
+              <groupfilter function='member' level='[none:name:nk]' member='&quot;Tine Laktosefri Lettmelk 0,5\%, 1 l&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1t3yrxl0j7j8zr1b0zyzx0bfd3bw].[none:category:nk]</column>
+            <column>[federated.1t3yrxl0j7j8zr1b0zyzx0bfd3bw].[none:name:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='label'>
+            <format attr='text-orientation' field='[federated.1t3yrxl0j7j8zr1b0zyzx0bfd3bw].[none:name:nk]' value='-90' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1t3yrxl0j7j8zr1b0zyzx0bfd3bw].[none:name:nk]' />
+              <tooltip column='[federated.1t3yrxl0j7j8zr1b0zyzx0bfd3bw].[attr:brand:nk]' />
+              <text column='[federated.1t3yrxl0j7j8zr1b0zyzx0bfd3bw].[avg:price:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1t3yrxl0j7j8zr1b0zyzx0bfd3bw].[avg:price:qk]</rows>
+        <cols>[federated.1t3yrxl0j7j8zr1b0zyzx0bfd3bw].[tdy:timestamp:qk]</cols>
+      </table>
+      <simple-id uuid='{DDD973EC-20BD-4463-B8A7-A45F39550E1A}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='300'>
+            <card mode='radiolist' param='[federated.1t3yrxl0j7j8zr1b0zyzx0bfd3bw].[none:category:nk]' type='filter' />
+            <card param='[federated.1t3yrxl0j7j8zr1b0zyzx0bfd3bw].[none:name:nk]' type='filter' values='relevant' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.1t3yrxl0j7j8zr1b0zyzx0bfd3bw].[none:brand:nk]</field>
+            <field>[federated.1t3yrxl0j7j8zr1b0zyzx0bfd3bw].[none:category:nk]</field>
+            <field>[federated.1t3yrxl0j7j8zr1b0zyzx0bfd3bw].[none:name:nk]</field>
+            <field>[federated.1t3yrxl0j7j8zr1b0zyzx0bfd3bw].[yr:timestamp:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{0FAAA385-7B66-4164-A4E7-260B92783F19}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='384' name='Sheet 1' width='384'>
+      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
+      AMycOZPw8HAOHz7Mhx9+2Gj1EVeHyspKDh06dN4yTqeTWbNmERcXR35+Pm+99RY5OTmUlpbS
+      tWtX3n77bQ4cOFDvPW63mxdffJEFCxYAsGXLFpYuXUqbNm145JFHmnyFm8vlYt26deTn55OV
+      lcWnn35KTk4OACEhITz33HM8+eSTjB07lp07dzJkyBBmzZrF9OnTcblc9Z4lcvToUUaPHs2T
+      Tz7JI488QkhICIsXL+aZZ55h9uzZrFy5EvfPlnafjwyG+5H9+/ezc+dOwsLCCAkJYcmSJTz/
+      /PNERUUxcOBABg8ejMfjYdmyZbhcLu68804AcnJyzngykdvt5tVXX+X++++nrKzMN2lcXs7Q
+      oUNxuVxMnDiRP/7xj5ejmuIKU1dXx0svvcSf//xn1q5dS1ZWFn379mXo0KEEBAQwb9489Ho9
+      QUFBfPvtt3To0IEOHTpgt9uJiIg4o0f/2Wef0a9fP9affDrfypUrmThxIvHx8axevZqysjJi
+      m+gJd16vl3/9619kZGRw+PBh5syZw5///GdiYnzLO1u08K3y2bZtG0uWLOGll14iICCAt956
+      iy1bttCjR496PZaysjI2bNjAoUOHuPnmmxkwYAAej0fbT1RUFLW1tURERPyi45MegJ84ceIE
+      r732GmPGjCE/P5+lS5fy4osvEhkZCYDRaKSiooIpU6bQuXNnWrdujcVi4cEHH2T8+PGMGzdO
+      ey4zwAcffMDtt9+uPY3J6XRqd0aVB7+LX8rhcPD888/Tv39/DAYDb7zxBnfeeSeDBw8G0JZr
+      vvfee3zwwQf8v//3/wD497//zYgRIwDqDXkUFhayfft2bRv4AiYsLAyAhIQEysrKmqRuqqry
+      wgsvYLVaGTJkCAC/+93vGD9+vDacqqoqb7/9NkuWLOHll18mKioKgIEDB3LnnXeyY8cOamt/
+      erb3sGHDmDt3Lg888ACfffYZubm59S4083g8FzXELQHgB1wuF0899RT9+/fXPniTJ08mPDxc
+      a6jNZjP3338/d911F3/4wx9QFIWwsDDmzp3L0qVLWbRoETU1vodw2Gw2Fi9ezPbt23n77bdZ
+      unQpJ06cwGazaZe1//x5CkKczfLly8nKyqJnz54AjBgxgi5dumiN2KlG1GKxMHfuXK0hv+uu
+      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
+      kJAAgMlk4sEHHyQiIoKqqiqsVisWi4UNGzag1WrZsWNHULwUFxYWhlarxeFwYDKZqKurIycn
+      B0VRsNlsnDt3DoDFixcTHR2NxWLB4XCg0+nUHU9CQgIrVqwImrOaayUkJNDZ2am+N2Cz2dRR
+      fRsbG6mtrSUqKoqSkhJcLhcul4vm5mby8vJIS0vDaDRy//33ExkZSXV1Ne3t7aSlpQW4VaN0
+      Oh3Dw8MMDg6i1+tpbm4mIyMDRVFob2+nqqqK8PBwSkpK0Gq1dHZ20t3dTWJiIlOnTsVgMPCN
+      b3yD8PBw6uvraW9vJzc394a2SS4BXYfb7aa5uZnm5mZcLhdHjx5l8eLFZGdn8/777wMQHx/P
+      l770JRoaGvwqlZlMJhwOB6+//jrFxcV0dHTQ3NzMrl27+Oc//xnw01Kfz0dLSwvNzc3Y7XaO
+      Hj3K7NmzWbBgAcePHwdGA7C0tJShoSEuXryoLmsymRgeHubNN9+koKBA3Rl2dnZiNBrV+gyB
+      1NvbS3NzMxaLBZvNRkNDA2vXrqWmpgaHw4GiKMyePZvly5dz8OBBdTm9Xo9Wq6Wmpobq6mqm
+      T5/OokWL2LZtG9u2bWPatGkB3/mPKSoqoqamhqGhIXw+nxrKWq2W5cuXs3DhQt555x3cbje7
+      d+/Gbrf77Sjy8vKCpi3Xk5qais1mo7Oz02/nHR0dzerVq5k0aRLl5eVcuXKFnTt3Eh8fT3Jy
+      MjC6k42MjKSuro6KigoKCwsD1YzrysvLo7GxEbvdjl6vV+uXREZGsnLlSmbNmsXJkycZHBxk
+      x44dAGRlZQGj4d/Y2Mirr77K+++/PyEHXHIGcB0ej4eenh5gtBCNzWbjzJkzfkNKJCYmEhkZ
+      yYwZM7DZbOpopFarlX379vG1r32N5ORkrl69ytKlS5k+fTqXLl3i3Llzfkeot5rP56OnpweN
+      RoPBYMBqtVJZWale34fRcNPpdMycOROz2aweOfb39/PGG29QWlpKVlaWekZTVlZGaWlpUJzh
+      OJ1Oenp6iIqKUtt67NgxnE4nfX19aDQaEhIS0Gg0fpdMFEXh+PHjuN1uHnjgATQaDVVVVTz8
+      8MNERkZy4MAB5s6dGxQv/UyePJkjR44QExPD1KlT1Qp6PT09XLhwgaioKLUv8/PzKSkpCYq+
+      +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
+    </thumbnail>
+  </thumbnails>
+</workbook>

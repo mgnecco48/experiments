@@ -1,0 +1,4 @@
+Linux machine IP: 192.168.4.76
+Mac machine IP: 192.168.4.46
+Key file Mac: /Users/martin/.ssh/id_ed25519
+Key file Linux: /home/martin/.ssh/id_ed25519
