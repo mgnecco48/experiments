@@ -5,7 +5,9 @@ import (
 	"os"
 	"path/filepath"
 
+	"charm.land/bubbles/v2/viewport"
 	tea "charm.land/bubbletea/v2"
+	"charm.land/glamour/v2"
 	"charm.land/lipgloss/v2"
 )
 
@@ -22,6 +24,9 @@ type model struct {
 
 	width  int
 	height int
+
+	viewport viewport.Model
+	renderer *glamour.TermRenderer
 }
 
 // COLOR STYLES FROM LIPGLOSS
@@ -53,7 +58,8 @@ func loadNotes(path string) []Note {
 
 func initialModel() model {
 	return model{
-		notes: loadNotes("/Users/martin/Documents/notes/"),
+		notes:    loadNotes("/Users/martin/Documents/notes/"),
+		viewport: viewport.Model{},
 	}
 }
 
@@ -67,14 +73,17 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 	case tea.WindowSizeMsg:
 		m.width = msg.Width
 		m.height = msg.Height
+		titleHeight := 3
+		hintHeight := 3
+		contentHeight := m.height - titleHeight - hintHeight // adjust if needed
 
-	// Is it a key press?
+		m.viewport.SetWidth(m.width)
+		m.viewport.SetHeight(contentHeight)
+
 	case tea.KeyPressMsg:
 
-		// Cool, what was the actual key pressed?
 		switch msg.String() {
 
-		// These keys should exit the program.
 		case "ctrl+c", "q":
 			if m.viewing {
 				m.viewing = false
@@ -82,32 +91,43 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 			}
 			return m, tea.Quit
 
-		// The "up" and "k" keys move the cursor up
 		case "up", "k":
-			if m.cursor > 0 {
-				m.cursor--
+			if !m.viewing {
+
+				if m.cursor > 0 {
+					m.cursor--
+				}
 			}
 
-		// The "down" and "j" keys move the cursor down
 		case "down", "j":
-			if m.cursor < len(m.notes)-1 {
-				m.cursor++
+			if !m.viewing {
+				if m.cursor < len(m.notes)-1 {
+					m.cursor++
+				}
 			}
 
-		// The "enter" key and the space bar toggle the selected state
-		// for the item that the cursor is pointing at.
 		case "enter":
 			note := m.notes[m.cursor]
 			content, err := os.ReadFile(note.Path)
 			if err == nil {
 				m.content = string(content)
 				m.viewing = true
+				text, err := glamour.Render(m.content, "dark")
+				if err != nil {
+					text = "NO CONTENT"
+				}
+				m.viewport.SetContent(text)
 			}
 		}
 	}
 
-	// Return the updated model to the Bubble Tea runtime for processing.
-	// Note that we're not returning a command.
+	// let viewport handle scrolling when viewing
+	if m.viewing {
+		var cmd tea.Cmd
+		m.viewport, cmd = m.viewport.Update(msg)
+		return m, cmd
+	}
+
 	return m, nil
 }
 
@@ -133,21 +153,21 @@ func (m model) View() tea.View {
 
 		usedHeight := lipgloss.Height(title) + lipgloss.Height(hint)
 		contentHeight := m.height - usedHeight
+
 		contentStyle := lipgloss.NewStyle().
 			Width(m.width).
 			Height(contentHeight).
-			Align(lipgloss.Left).
+			Align(lipgloss.Center).
 			Foreground(lipgloss.BrightWhite).
 			BorderStyle(lipgloss.RoundedBorder()).
 			BorderForeground(lipgloss.BrightWhite)
 
-		content := contentStyle.Render(m.content)
+		content := contentStyle.Render(m.viewport.View())
 
 		v := tea.NewView(title + "\n" + content + "\n" + hint)
 		v.AltScreen = true
 
 		return v
-
 	}
 
 	var notesList string
