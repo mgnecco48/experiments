@@ -19,14 +19,12 @@ while True:
 
     message = data.decode().strip()
     print("Received:", message)
-    
-    exitCodes= ["quit", "bye", "close"]
 
-    if message in exitCodes: 
+    exitCodes = ["quit", "bye", "close"]
+
+    if message in exitCodes:
         conn.sendall(b"Goodbye!\n")
         conn.close()
         break
     else:
         conn.sendall(b"Hello from Python server!\n")
-
-

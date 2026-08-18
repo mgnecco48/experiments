@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+@theme {
+    --font-pixel: "Geist Pixel", sans-serif; 
+    --font-alien: "Alien Block", sans-serif;
+    --font-orbitron: "Orbitron", sans-serif;
+    --font-pirata: "Pirata One", system-ui;
+    --font-roboto: "Roboto Condensed", sans-serif;
+}
+

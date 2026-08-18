@@ -6,7 +6,14 @@ options=(
     "Takedown"
     "Rebuild"
     "Logs"
+    "Exit"
 )
+
+width=$COLUMNS
+gum style \
+    --foreground "cyan" --border-foreground "cyan" --border="rounded" \
+    --align center --width 40 --margin "1 2" --padding "2 4" \
+    --bold 'Dockerizer' 'Your Docker friend!!!'
 
 choice=$(printf "%s\n" "${options[@]}" | gum choose --header "What do you want to do")
 case "$choice" in
@@ -26,5 +33,8 @@ case "$choice" in
 "Logs")
     service=$(docker compose ps --services | gum choose --header "Choose a service to view logs")
     docker compose logs "$service"
+    ;;
+"Exit")
+    exit 1
     ;;
 esac
